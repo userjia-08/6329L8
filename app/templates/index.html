@@ -2,52 +2,53 @@
 
 <html>
 <head>
-<title>Add Image</title>
-<h1 align="center">A SURVEY: HOW YOU GO TO SCHOOL</h1>
+<title>Choose your fruits</title>
+<h1 align="center">Choose Your Fruits</h1>
 <script>
 function fruitorder()
 {
   
-if(document.getElementById("1-5").checked == true)
+if(document.getElementById("one").checked == true)
 {
-  Mycar = "Not many come by car"; 
+  Mycar = "1"; 
 }
-if(document.getElementById("1-5w").checked == true)
+if(document.getElementById("one1").checked == true)
 {
-  Mywalk = "Not many walk to school";
+  Mywalk = "1";
 }
-if(document.getElementById("1-5b").checked == true)
+if(document.getElementById("one2").checked == true)
 {
-  Mybus = "Not many come with school bus";
+  Mybus = "1";
 }
-if(document.getElementById("6-10").checked == true)
+if(document.getElementById("two").checked == true)
 {
-  Mycar = "Half of the class come by car";
+  Mycar = "2";
 }
-if(document.getElementById("6-10w").checked == true)
+if(document.getElementById("two1").checked == true)
 {
-  Mywalk = "Half of the class walks to school";
+  Mywalk = "2";
 }
-if(document.getElementById("6-10b").checked == true)
+if(document.getElementById("two2").checked == true)
 {
-  Mybus = "Half of the class comes by bus";
+  Mybus = "2";
 }
-if(document.getElementById("11-20").checked == true)
+if(document.getElementById("three").checked == true)
 {
-  Mycar = "Majority of them come by car";
+  Mycar = "3";
 }
-if(document.getElementById("11-20w").checked == true)
+if(document.getElementById("three1").checked == true)
 {
-  Mywalk = "Majority of them walk to school";
+  Mywalk = "3";
 }
-if(document.getElementById("11-20b").checked == true)
+if(document.getElementById("three2").checked == true)
 {
-  Mybus = "Majority of them come by bus";
+  Mybus = "3";
 }
 
 document.getElementById("transport").innerHTML = Mycar;
 document.getElementById("transport1").innerHTML = Mywalk;
 document.getElementById("transport2").innerHTML = Mybus;
+document.getElementById("transport3").innerHTML = Mycar*1 + Mywalk*2 + Mybus*3;
 return false;
 
 }
@@ -57,34 +58,34 @@ return false;
 <body>
     <br><br>
     <p style="text-align:center;">
-    <img src="static/car.jpg" width="150" alt="Logo">
-    <img src="static/walk.jpg" width="150" alt="Logo">
-    <img src="static/bus.jpg" width="150" alt="Logo"></p>
+    <img src="../static/apple.jpg" width="150" alt="Logo">
+    <img src="../static/orange.jpg" width="150" alt="Logo">
+    <img src="../static/pineapple.jpg" width="150" alt="Logo"></p>
     <br>
     <form method="post" onsubmit="return fruitorder()">
         <table align="center" border="1" width="400">
             <tr>
-            <td>Class 2A-20</td><td align="30%">How You Come to School</td>
+            <td>Quantity/Fruits</td><td align="30%">Type of Fruits</td>
             </tr>
             <tr>
-            <td>Car </td><td><input type="radio" id="1-5" name="car" value="1-5">1-5
-                              <input type="radio" id="6-10" name="car" value="6-10">6-10
-                              <input type="radio" id="11-20" name="car" value="11-20">11-20
+            <td>Apple$1 </td><td><input type="radio" id="one" name="Apple" value="1">1
+                              <input type="radio" id="two" name="Apple" value="2">2
+                              <input type="radio" id="three" name="Apple" value="3">3
             </td>
             </tr>
             <tr>
-            <td>Walk </td><td><input type="radio" id="1-5w" name="walk" value="1-5w">1-5
-                              <input type="radio" id="6-10w" name="walk" value="6-10w">6-10
-                              <input type="radio" id="11-20w" name="walk" value="11-20w">11-20
+            <td>Orange$2 </td><td><input type="radio" id="one1" name="Orange" value="1">1
+                              <input type="radio" id="two1" name="Orange" value="2">2
+                              <input type="radio" id="three1" name="Orange" value="3">3
             </td>
             </tr>
             <tr>
-            <td>Bus </td><td><input type="radio" id="1-5b" name="bus" value="1-5b">1-5
-                              <input type="radio" id="6-10b" name="bus" value="6-10b">6-10
-                              <input type="radio" id="11-20b" name="bus" value="11-20b">11-20
+            <td>Pineapple$3 </td><td><input type="radio" id="one2" name="Pineapple" value="1">1
+                              <input type="radio" id="two2" name="Pineapple" value="2">2
+                              <input type="radio" id="three2" name="Pineapple" value="3">3
             </td>
             </tr>
-            <tr><td><input type="submit" value="Next"></td><td>Submit your survey outputs!Thank You</td></tr>
+            <tr><td><input type="submit" value="Next"></td><td>Submit your purchase!Thank You</td></tr>
             </table>
     </form>
     <br><br>
@@ -92,14 +93,17 @@ return false;
 <tr>
 <td width="33%">List :</td><td align="center">The Results </td></tr>
 <tr>
-<td width="33%">By Car: </td><td><div id="transport"></div></td>
+<td width="33%">Apple Quantity: </td><td><div id="transport"></div></td>
 </tr>
 <tr>
-<td width="33%">Walking: </td><td><div id="transport1"></div></td>
+<td width="33%">Orange Quantity: </td><td><div id="transport1"></div></td>
 </tr>
 <tr>
-<td width="33%">By School Bus: </td><td><div id="transport2"></div></td>
+<td width="33%">Pineapple Quantity: </td><td><div id="transport2"></div></td>
 </tr>
+<tr>
+  <td width="33%">Total price: </td><td><div id="transport3"></div></td>
+  </tr>
 </table>    
 </body>
 </html>
